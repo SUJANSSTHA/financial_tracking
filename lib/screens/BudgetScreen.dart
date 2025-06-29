@@ -172,7 +172,7 @@ class _BudgetScreenState extends State<BudgetScreen> with TickerProviderStateMix
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('\$${totalSpent.toStringAsFixed(2)} / \$${totalBudget.toStringAsFixed(2)}'),
+                Text('Rs.${totalSpent.toStringAsFixed(2)} / Rs.${totalBudget.toStringAsFixed(2)}'),
                 Text('${(overallPercentage * 100).toStringAsFixed(1)}%',
                      style: TextStyle(fontWeight: FontWeight.bold)),
               ],
@@ -289,7 +289,7 @@ class _BudgetScreenState extends State<BudgetScreen> with TickerProviderStateMix
                       child: Text(
                         budget.category,
                         style: TextStyle(
-                          fontSize: 18, 
+                          fontSize: 16, 
                           fontWeight: FontWeight.bold,
                           color: isOverBudget ? Colors.red : null,
                         ),
@@ -301,7 +301,7 @@ class _BudgetScreenState extends State<BudgetScreen> with TickerProviderStateMix
                           Icon(Icons.warning, color: Colors.red, size: 20),
                         SizedBox(width: 4),
                         Text(
-                          '\$${budget.spent.toStringAsFixed(2)} / \$${budget.limit.toStringAsFixed(2)}',
+                          'Rs.${budget.spent.toStringAsFixed(2)} / Rs.${budget.limit.toStringAsFixed(2)}',
                           style: TextStyle(
                             fontSize: 14, 
                             color: Colors.grey[600],
@@ -335,7 +335,7 @@ class _BudgetScreenState extends State<BudgetScreen> with TickerProviderStateMix
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      'Remaining: \$${budget.remaining.toStringAsFixed(2)}',
+                      'Remaining: Rs.${budget.remaining.toStringAsFixed(2)}',
                       style: TextStyle(
                         color: budget.remaining >= 0 ? Colors.green : Colors.red,
                         fontWeight: FontWeight.w600,
@@ -397,7 +397,7 @@ class _BudgetScreenState extends State<BudgetScreen> with TickerProviderStateMix
                   decoration: InputDecoration(
                     labelText: 'Budget Limit',
                     border: OutlineInputBorder(),
-                    prefixText: '\$',
+                    prefixText: 'Rs.',
                   ),
                   keyboardType: TextInputType.numberWithOptions(decimal: true),
                 ),
@@ -407,7 +407,7 @@ class _BudgetScreenState extends State<BudgetScreen> with TickerProviderStateMix
                   decoration: InputDecoration(
                     labelText: 'Amount Spent',
                     border: OutlineInputBorder(),
-                    prefixText: '\$',
+                    prefixText: 'Rs.',
                   ),
                   keyboardType: TextInputType.numberWithOptions(decimal: true),
                 ),
@@ -471,7 +471,7 @@ class _BudgetScreenState extends State<BudgetScreen> with TickerProviderStateMix
                 decoration: InputDecoration(
                   labelText: 'Budget Limit',
                   border: OutlineInputBorder(),
-                  prefixText: '\$',
+                  prefixText: 'Rs.',
                 ),
                 keyboardType: TextInputType.numberWithOptions(decimal: true),
               ),

@@ -1,4 +1,3 @@
-
 import 'package:financial_tracking/models/BudgetModelwithJSONserialization.dart';
 import 'package:flutter/material.dart';
 import '../models/TransactionModelwithJSONserialization.dart';
@@ -65,7 +64,7 @@ class TransactionsScreen extends StatelessWidget {
                   ],
                 ),
                 trailing: Text(
-                  '${transaction.isIncome ? '+' : '-'}\$${transaction.amount.toStringAsFixed(2)}',
+                  '${transaction.isIncome ? '+' : '-'}Rs.${transaction.amount.toStringAsFixed(2)}',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: transaction.isIncome ? Colors.green : Colors.red,
@@ -94,4 +93,3 @@ class TransactionsScreen extends StatelessWidget {
     );
   }
 }
-
