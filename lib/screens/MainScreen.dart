@@ -219,6 +219,7 @@ class _MainScreenState extends State<MainScreen> {
       DashboardScreen(transactions: transactions, onClearData: _clearAllData),
       TransactionsScreen(
         transactions: transactions,
+        budgets: budgets,  // NEW: Pass budgets for dynamic categories
         onAddTransaction: _addTransaction,
         onDeleteTransaction: _deleteTransaction,
       ),

@@ -1,4 +1,5 @@
 
+import 'package:financial_tracking/models/BudgetModelwithJSONserialization.dart';
 import 'package:flutter/material.dart';
 import '../models/TransactionModelwithJSONserialization.dart';
 import '../widgets/add_transaction_dialog.dart';
@@ -12,7 +13,7 @@ class TransactionsScreen extends StatelessWidget {
   const TransactionsScreen({super.key, 
     required this.transactions,
     required this.onAddTransaction,
-    required this.onDeleteTransaction,
+    required this.onDeleteTransaction, required List<Budget> budgets,
   });
 
   @override
